@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
+import sys
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -23,9 +24,11 @@ def lock():
 def unlock():
     SetAngle(180)
 
-lock()
-sleep(1)
-unlock()
+def main():
+    if sys.argv[1] == 'open':
+        unlock()
+    elif sys.argv[1] == 'close':
+        lock()
 
 pwm.stop()
 GPIO.cleanup()
