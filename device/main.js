@@ -15,6 +15,8 @@ app.get('/open_lock', function(req, res) {
 });
 
 app.get('/close_lock', function(req, res) {
-  var spawn = require('child_process').spawn;
-  var proc = spawn('python', ['/home/pi/lock/GPIOTest.py', 'close']);
+	var spawn = require('child_process').spawn;
+	var proc = spawn('python', ['/home/pi/lock/GPIOTest.py', 'close']);
 });
+
+app.listen(8000, '0.0.0.0', function() {});
