@@ -12,11 +12,13 @@ function handle_res(res, err, data) {
 app.get('/open_lock', function(req, res) {
   var spawn = require('child_process').spawn;
   var proc = spawn('python', ['/home/pi/lock/GPIOTest.py', 'open']);
+	handle_res(res, 0, "Success");
 });
 
 app.get('/close_lock', function(req, res) {
 	var spawn = require('child_process').spawn;
 	var proc = spawn('python', ['/home/pi/lock/GPIOTest.py', 'close']);
+	handle_res(res, 0, "Success");
 });
 
 app.listen(8000, '0.0.0.0', function() {});
