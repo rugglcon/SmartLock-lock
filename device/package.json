@@ -1,0 +1,13 @@
+{
+  "name": "SmartLock-lock",
+  "version": "0.1.0",
+  "description": "Lock server for the SmartLock project for SE329",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rugglcon/SmartLock-lock.git"
+  }
+}
