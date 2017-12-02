@@ -18,6 +18,9 @@ def SetAngle(angle):
     GPIO.output(03, False)
     pwm.ChangeDutyCycle(0)
 
+def lock():
+    SetAngle(0)
+
 def unlock():
     SetAngle(180)
 
@@ -27,8 +30,7 @@ def main():
     elif sys.argv[1] == 'close':
         lock()
 
-if __name__ == "__main__":
-    unlock()
+main()
 
 pwm.stop()
 GPIO.cleanup()
