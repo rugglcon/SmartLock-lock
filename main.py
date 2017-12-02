@@ -29,8 +29,10 @@ def main():
         unlock()
     elif sys.argv[1] == 'close':
         lock()
+    print(True)
 
 main()
+sys.stdout.flush()
 
 pwm.stop()
 GPIO.cleanup()
